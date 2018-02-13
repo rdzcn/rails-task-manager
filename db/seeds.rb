@@ -5,3 +5,10 @@
 #
 #   movies = Movie.create([{ name: 'Star Wars' }, { name: 'Lord of the Rings' }])
 #   Character.create(name: 'Luke', movie: movies.first)
+
+title = ["laundry", "study", "walk the dog", "cook", "grocery shopping"]7
+description = ["do it good", "do it real good", "very very important", "life is a bitch", "this task is my favorite"]
+
+20.times do
+  Task.create(title: title[rand(0..4)], description: description[rand(0..4)])
+end
