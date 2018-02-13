@@ -1,0 +1,18 @@
+<div class="container-index">
+<h1>MY TASKS</h1>
+
+<ul>
+<% @tasks.each do |task| %>
+	<li>
+	<% if task.completed  %>
+		<i class="fa fa-check-circle"></i>
+		<%= link_to task.title, task_path(task) %>
+
+	<% else %>
+			<i class="fa fa-circle-thin"></i>
+		<%= link_to task.title, task_path(task) %>
+	<% end %>
+	</li>
+<% end %>
+</ul>
+</div>

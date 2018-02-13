@@ -1,0 +1,16 @@
+<div class="container-show">
+	<h1>TASK</h1>
+
+	<div class="show-task">
+		<p>Title: <%= @task.title %></p>
+		<p>Details: <%= @task.details %></p>
+		<p>Created at: <%= @task.created_at %></p>
+
+		<% if !@task.completed  %>
+		<p>Come on, chop chop! This task has not been completed yet.</p>
+		<% else %>
+		<p>Good job! This task has been completed.</p>
+		<% end %>
+	</div>
+
+</div>
